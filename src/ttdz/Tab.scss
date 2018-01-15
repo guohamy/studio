@@ -1,0 +1,93 @@
+.tab {
+    display: flex;
+    flex-direction: column;
+
+    .menu {
+        display: flex;
+
+        li {
+            width: 10px;
+            flex: 1;
+            height: 0.8rem;
+            line-height: 0.8rem;
+            text-align: center;
+            background-color: #3e215b;
+            color: #a396cd;
+            font-size: 0.3rem;
+            border-bottom: 1px #523885 solid;
+            border-right: 1px #523885 solid;
+            transition-duration: 300ms;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &[data-current="true"] {
+                color: #e4dcff;
+                background-color: #50308f;
+                border-bottom: 1px #e4dcff solid;
+            }
+        }
+    }
+
+    .slider {
+        padding: 0.2rem 0.2rem 0;
+        height: 10px;
+        flex-grow: 1;
+
+        .swiper-tab {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                height: 100%;
+                padding-bottom: 0.2rem;
+                overflow: auto;
+
+                .header {
+                    background-color: #523885;
+                    padding: 0.2rem;
+                    border-radius: 0.1rem;
+                    margin-bottom: 0.2rem;
+                    display: flex;
+                    align-items: flex-start;
+
+                    img {
+                        width: 1.5rem;
+                        margin-right: 0.2rem;
+                    }
+
+                    .detail {
+
+                        h3 {
+                            font-size: 0.3rem;
+                            font-weight: bold;
+                            color: #e4dcff;
+                            line-height: 0.36rem;
+                            margin-bottom: 0.1rem;
+                        }
+
+                        p {
+                            font-size: 0.24rem;
+                            color: #b7a9e1;
+                            line-height: 0.32rem;
+                        }
+                    }
+                }
+
+                .items {
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: #4b3380;
+                    padding: 0.2rem 0.1rem;
+                    border-radius: 0.1rem;
+
+                    .item {
+                        padding: 0 0.1rem;
+                        width: 33.3333%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.ds-danmu{
+    width: 100%;
+    height: 1.56rem;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 1.12rem;
+    z-index: 1;
+    pointer-events: none;
+
+    .dd-item {
+        width: 100%;
+        font-size: 0.32rem;
+        line-height: 0.52rem;
+        position: absolute;
+        left: 0;
+        text-align: left;
+        white-space: nowrap;
+        text-shadow: rgb(0, 0, 0) -1px -1px, rgb(0, 0, 0) -1px 1px, rgb(0, 0, 0) 1px -1px, rgb(0, 0, 0) 1px 1px;
+        color: #fff;
+        transform: translate3d(100%, 0, 0);
+        animation: move 14s 100ms 1;
+
+        b {
+            color: #ffd84d;
+            font-weight: normal;
+            padding-right: 0.2rem;
+        }
+
+        span {
+            color: #fff;
+        }
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate3d(100%,0,0);
+    }
+    100% {
+        transform: translate3d(-100%,0,0);
+    }
+}

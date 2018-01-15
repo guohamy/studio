@@ -1,0 +1,22 @@
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background-color: #3e215b;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+}
+
+.body {
+    width: 10px;
+    height: 100%;
+    flex-grow: 1;
+
+    &.pd20 {
+        padding: 0.2rem;
+    }
+}

@@ -1,0 +1,79 @@
+.ds-zan {
+    width: 0.62rem;
+    height: 0.64rem;
+    position: absolute;
+    right: 0.24rem;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    .zan_item {
+        width: 0.62rem;
+        height: 0.66rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: 3s 100ms forwards;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            background-image: url(./images/zan.png);
+            background-size: 0.62rem 3.29rem;
+            animation: moveY 3s linear 100ms forwards;
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .zan#{$i}:before {
+        $y: ($i - 1) * 0.66 + rem;
+        background-position-y: $y;
+    }
+}
+
+$moveX: (0,-12px,0,6px,-6px);
+@keyframes moveX {
+    @for $i from 1 through 5 {
+        $pstep: ($i - 1) * 25%;
+        #{$pstep} {
+            transform: translate3d(nth($moveX, $i),0,0) rotate(5deg);
+        }
+    }
+}
+
+$_moveX: (0,16px,0,-8px,8px);
+@keyframes _moveX {
+    @for $i from 1 through 5 {
+        $pstep: ($i - 1) * 25%;
+        #{$pstep} {
+            transform: translate3d(nth($_moveX, $i),0,0) rotate(-5deg);
+        }
+    }
+}
+
+@keyframes moveY {
+    @for $i from 1 through 5 {
+        $pstep: ($i - 1) * 25%;
+        $y: -($i - 1) * 60 + px;
+        #{$pstep} {
+            @if $pstep == 0% {
+                transform: translate3d(0,$y,0) scale3d(0.3,0.3,0.3);
+            }
+            @else {
+                transform: translate3d(0,$y,0) scale3d(1,1,1);
+            }
+            @if $pstep == 0% or $pstep == 100% {
+                opacity: 0;
+            }
+            @else {
+                opacity: 1;
+            }
+        }
+    }
+}

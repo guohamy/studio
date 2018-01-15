@@ -1,0 +1,53 @@
+.match {
+    overflow: auto;
+
+    .header {
+        background-color: #fdebcc;
+        padding: 0.2rem;
+        border-radius: 0.1rem;
+        margin-bottom: 0.2rem;
+        display: flex;
+        align-items: flex-start;
+
+        img {
+            height: 1.08rem;
+            margin-right: 0.2rem;
+            border-radius: 0.1rem;
+        }
+    }
+
+    .detail {
+
+        &.outside {
+            background-color: #fdebcc;
+            padding: 0.2rem;
+            border-radius: 0.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        h3 {
+            font-size: 0.3rem;
+            font-weight: bold;
+            color: #b73911;
+            line-height: 0.36rem;
+            margin-bottom: 0.1rem;
+        }
+
+        p {
+            font-size: 0.24rem;
+            color: #cd7052;
+            line-height: 0.32rem;
+        }
+    }
+
+    .items {
+        margin-left: -0.2rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+            width: 25%;
+            padding-left: 0.2rem;
+        }
+    }
+}

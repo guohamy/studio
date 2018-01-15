@@ -1,0 +1,52 @@
+.home {
+    overflow: auto;
+
+    .swiper-banner {
+        margin-bottom: 0.1rem;
+
+        .swiper-wrapper {
+            margin-left: -0.1rem;
+
+            .swiper-slide {
+                width: 5.54rem;
+                height: 2rem;
+                margin-left: 0.1rem;
+                border-radius: 0.1rem;
+                overflow: hidden;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 2.54rem;
+                }
+            }
+        }
+    }
+
+    .swiper-video {
+
+        .swiper-wrapper {
+            margin-left: -0.1rem;
+
+            .swiper-slide {
+                width: 2.73rem;
+                margin-left: 0.1rem;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 2.06rem;
+                }
+            }
+        }
+    }
+}
+
+.swiper-lazy {
+    transition-duration: 150ms;
+    opacity: 0;
+
+    &.swiper-lazy-loaded {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,15 @@
+.global-title {
+    flex-shrink: 0;
+    font-size: 0.24rem;
+    color: #703c09;
+    display: flex;
+    align-items: center;
+    height: 0.54rem;
+    font-weight: bold;
+
+    img {
+        flex-shrink: 0;
+        height: 0.3rem;
+        margin-right: 0.12rem;
+    }
+}

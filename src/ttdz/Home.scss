@@ -1,0 +1,47 @@
+.home {
+    display: flex;
+
+    .home-main {
+        width: 8.5rem;
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            width: 100%;
+            height: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0.1rem 0.1rem 0 0;
+            overflow: hidden;
+            margin-bottom: 0.2rem;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 0.82rem;
+            flex-shrink: 0;
+        }
+    }
+
+    .home-side {
+        width: 10px;
+        height: 100%;
+        flex-grow: 1;
+        margin-left: 0.2rem;
+        background-color: #381758;
+        border-radius: 0.1rem 0.1rem 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .swiper-live {
+            flex-grow: 1;
+            height: 100%;
+
+            .swiper-slide {
+                height: 2.36rem;
+            }
+        }
+    }
+}

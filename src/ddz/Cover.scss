@@ -1,0 +1,48 @@
+.global-item {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .global-cover {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        height: 100%;
+        position: relative;
+        border-radius: 0.1rem;
+
+        &[data-height="true"] {
+            padding-top: 56.25%;
+        }
+
+        &.icon-play:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url(./images/icon-play.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 12.5% auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    p {
+        font-size: 0.22rem;
+        line-height: 0.42rem;
+        color: #8e7154;
+        height: 0.42rem;
+        flex-shrink: 0;
+        overflow: hidden;
+        margin-bottom: 0.1rem;
+
+        &.pd {
+            padding: 0 0.1rem;
+        }
+    }
+}
+
